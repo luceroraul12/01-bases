@@ -4,4 +4,8 @@
         <button (click)="borrarAlumno(nombre)">Borrar</button>
     </li>
 </ol>
-<h2 *ngIf="personaBorrada !== ''">Borraste: {{personaBorrada}}</h2>
+<h2 *ngIf="personaBorrada else opcionElse ">Borraste: {{personaBorrada}}</h2>
+
+<ng-template #opcionElse>
+    <h2>Preparado para borrar Personas</h2>
+</ng-template>
