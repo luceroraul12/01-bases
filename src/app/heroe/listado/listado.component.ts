@@ -11,13 +11,13 @@ export class ListadoComponent{
     "Raul", "Juan", "Pepe", "Franco"
   ];
 
-  personaBorrada: string = "";
+  personaBorrada: string =  '';
 
 
   borrarAlumno(nombre: string){
     this.personaBorrada = nombre;
       this.nombreDeAlumnos.splice(
         this.nombreDeAlumnos.indexOf(nombre), 1
-      )
+      );
   }
 }
