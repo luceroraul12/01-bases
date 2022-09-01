@@ -13,4 +13,6 @@ export class AppComponent {
   acumular( cantidad: number): void {
       this.contador += cantidad;
   }
+
+  
 }

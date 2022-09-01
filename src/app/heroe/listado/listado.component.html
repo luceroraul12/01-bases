@@ -1,0 +1,7 @@
+<ol>
+    <li *ngFor="let nombre of nombreDeAlumnos">
+        {{nombre}}
+        <button (click)="borrarAlumno(nombre)">Borrar</button>
+    </li>
+</ol>
+<h2>Borraste: {{personaBorrada}}</h2>
