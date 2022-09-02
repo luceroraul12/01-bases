@@ -23,4 +23,10 @@ export class MainPageComponent implements OnInit {
 
   listaDePersonajesCreados: Personaje[] = [];
 
+  addPersonaje(personajeRecibido: Personaje){
+
+    this.listaDePersonajesCreados.push(personajeRecibido);
+
+  }
+
 }

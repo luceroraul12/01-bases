@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
@@ -13,7 +13,7 @@ export class CrearComponent implements OnInit {
     poder: 0
   };
 
-  @Input('lista') listaPersonajes: Personaje[] = [];
+  @Output() onCrearPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
   constructor() { }
 
@@ -24,7 +24,7 @@ export class CrearComponent implements OnInit {
     if ( this.personajeCreado.nombre == "" ){
       return;
     }
-    this.listaPersonajes.push(this.personajeCreado);
+    this.onCrearPersonaje.emit(this.personajeCreado);
     this.personajeCreado = {
       nombre: "",
       poder: 0

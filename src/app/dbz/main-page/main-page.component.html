@@ -1,6 +1,6 @@
 <h1>Dragon Ball Z</h1>
 <hr>
-<app-crear [lista]="listaDePersonajesCreados" [personaje]="personajeCreado"></app-crear>
+<app-crear (onCrearPersonaje)="addPersonaje($event)" [personaje]="personajeCreado"></app-crear>
 <hr>
 <div>
     <app-personajes [data]="listaDePersonajesCreados"></app-personajes>
