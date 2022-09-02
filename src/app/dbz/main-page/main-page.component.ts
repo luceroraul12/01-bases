@@ -17,8 +17,8 @@ export class MainPageComponent implements OnInit {
   }
 
   personajeCreado: Personaje = {
-    nombre: "",
-    poder: 0
+    nombre: "Yochi",
+    poder: -900
   }
 
   listaDePersonajesCreados: Personaje[] = [];

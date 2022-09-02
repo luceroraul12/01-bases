@@ -8,7 +8,7 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class CrearComponent implements OnInit {
 
-  @Input() personajeCreado: Personaje = {
+  @Input('personaje') personajeCreado: Personaje = {
     nombre: "",
     poder: 0
   };
