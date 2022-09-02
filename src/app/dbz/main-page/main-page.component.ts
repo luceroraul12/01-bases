@@ -21,7 +21,6 @@ export class MainPageComponent implements OnInit {
     poder: -900
   }
 
-  listaDePersonajesCreados: Personaje[] = [];
 
   addPersonaje(personajeRecibido: Personaje){
 
