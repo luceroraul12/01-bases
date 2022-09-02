@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../service/dbz.service';
 
 @Component({
   selector: 'app-crear',
@@ -13,9 +14,8 @@ export class CrearComponent implements OnInit {
     poder: 0
   };
 
-  @Output() onCrearPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
-  constructor() { }
+  constructor(private dbzService: DbzService) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +24,9 @@ export class CrearComponent implements OnInit {
     if ( this.personajeCreado.nombre == "" ){
       return;
     }
-    this.onCrearPersonaje.emit(this.personajeCreado);
+    
+    this.dbzService.crearPersonaje(this.personajeCreado)
+
     this.personajeCreado = {
       nombre: "",
       poder: 0

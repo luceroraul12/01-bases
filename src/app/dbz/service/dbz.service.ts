@@ -2,9 +2,18 @@ import { Injectable } from "@angular/core";
 import { Personaje } from "../interfaces/dbz.interface";
 
 @Injectable()
-class DbzService {
+export class DbzService {
 
-  private _listaPersonajes: Personaje[] = [];
+    constructor(){
+        
+    }
+
+  private _listaPersonajes: Personaje[] = [
+    {
+      nombre: "Goku",
+      poder: 15000
+    }
+  ];
 
   get listaPersonajes(): Personaje[]{
     return [...this._listaPersonajes];

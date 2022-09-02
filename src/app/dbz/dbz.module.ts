@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { FormsModule } from '@angular/forms';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { CrearComponent } from './crear/crear.component';
+import { DbzService } from './service/dbz.service';
 
 
 
@@ -19,6 +20,9 @@ import { CrearComponent } from './crear/crear.component';
   ],
   exports: [
     MainPageComponent
+  ],
+  providers: [
+    DbzService
   ]
 })
 export class DbzModule { }

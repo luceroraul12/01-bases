@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../service/dbz.service';
 
 
 
@@ -11,7 +12,7 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dbzService: DbzService) { }
 
   ngOnInit(): void {
   }
@@ -19,13 +20,6 @@ export class MainPageComponent implements OnInit {
   personajeCreado: Personaje = {
     nombre: "Yochi",
     poder: -900
-  }
-
-
-  addPersonaje(personajeRecibido: Personaje){
-
-    this.listaDePersonajesCreados.push(personajeRecibido);
-
   }
 
 }
