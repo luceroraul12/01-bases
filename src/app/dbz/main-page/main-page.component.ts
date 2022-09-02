@@ -23,15 +23,4 @@ export class MainPageComponent implements OnInit {
 
   listaDePersonajesCreados: Personaje[] = [];
 
-  crear(){
-    if ( this.personajeCreado.nombre == "" ){
-      return;
-    }
-    this.listaDePersonajesCreados.push(this.personajeCreado);
-    this.personajeCreado = {
-      nombre: "",
-      poder: 0
-    }
-  }
-
 }

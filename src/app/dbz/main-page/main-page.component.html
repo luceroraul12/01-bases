@@ -1,14 +1,6 @@
 <h1>Dragon Ball Z</h1>
 <hr>
-<h2>Creación y Visualización de personajes</h2>
-<br>
-<div>
-    <form (ngSubmit)="crear()">
-        <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="personajeCreado.nombre">
-        <input type=" number" placeholder="Poder" name="poder" [(ngModel)]="personajeCreado.poder">
-        <button type="submit">Crear</button>
-    </form>
-</div>
+<app-crear [lista]="listaDePersonajesCreados"></app-crear>
 <hr>
 <div>
     <app-personajes [data]="listaDePersonajesCreados"></app-personajes>
